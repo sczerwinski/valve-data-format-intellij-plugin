@@ -1,0 +1,29 @@
+# Dependabot configuration:
+# https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  # Maintain Gradle dependencies
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      kotlin:
+        patterns:
+          - "org.jetbrains.kotlin.jvm"
+          - "com.google.devtools.ksp"
+      glimpse:
+        patterns:
+          - "graphics.glimpse:glimpse*"
+      jogamp:
+        patterns:
+          - "org.jogamp*"
+      detekt:
+        patterns:
+          - "io.gitlab.arturbosch.detekt*"
+  # Maintain GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
