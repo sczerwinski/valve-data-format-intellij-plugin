@@ -10,6 +10,29 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+
+        <iconMapper
+                mappingFile="icons/ValveIconMappings.json"/>
+
+        <fileType
+                name="Valve Data Format"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.VdfFileType"
+                fieldName="INSTANCE"
+                language="VDF"
+                extensions="vdf"/>
+        <lang.parserDefinition
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.VdfParserDefinition"/>
+        <lang.syntaxHighlighter
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.VdfSyntaxHighlighter"/>
+        <annotator
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.annotation.VdfAnnotator"/>
+
+        <colorSettingsPage
+                implementation="it.czerwinski.ide.plugins.valve.settings.VdfColorSettingsPage"/>
+
     </extensions>
 
 </idea-plugin>
