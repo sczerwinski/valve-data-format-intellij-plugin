@@ -88,7 +88,7 @@ class VdfColorSettingsPage : RainbowColorSettingsPage, DisplayPrioritySortable {
      * Returns display name for Valve Data Format.
      */
     override fun getDisplayName(): String =
-        requireNotNull(ValveBundle.message(key = "fileType.vdf.name"))
+        ValveBundle.message(key = "fileType.vdf.name")
 
     /**
      * Returns icon for Valve Data Format.

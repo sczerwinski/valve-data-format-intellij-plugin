@@ -76,4 +76,16 @@ class VdfParserDefinition : ParserDefinition {
      */
     override fun createFile(viewProvider: FileViewProvider): PsiFile =
         VdfFile(viewProvider)
+
+    /**
+     * Returns space requirements between [left] and [right] node.
+     */
+    override fun spaceExistenceTypeBetweenTokens(left: ASTNode?, right: ASTNode?): ParserDefinition.SpaceRequirements {
+        val spaceRequiredTypes = listOf(VdfTypes.KEY, VdfTypes.LITERAL, VdfTypes.STRING)
+        return if (left?.elementType in spaceRequiredTypes && right?.elementType in spaceRequiredTypes) {
+            ParserDefinition.SpaceRequirements.MUST
+        } else {
+            ParserDefinition.SpaceRequirements.MAY
+        }
+    }
 }

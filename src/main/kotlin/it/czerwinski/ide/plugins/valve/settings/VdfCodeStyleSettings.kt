@@ -14,22 +14,13 @@
  * limitations under the License.
  */
 
-package it.czerwinski.ide.plugins.valve.lang
+package it.czerwinski.ide.plugins.valve.settings
 
-import com.intellij.lang.Language
-import it.czerwinski.ide.plugins.valve.ValveBundle
+import com.intellij.psi.codeStyle.CodeStyleSettings
+import com.intellij.psi.codeStyle.CustomCodeStyleSettings
+import it.czerwinski.ide.plugins.valve.lang.VdfLanguage
 
 /**
- * Language for the Valve Data Format.
+ * Code style settings for Valve Data Format files.
  */
-object VdfLanguage : Language("VDF") {
-
-    /**
-     * Returns display name of the Valve Data Format language.
-     */
-    override fun getDisplayName(): String =
-        ValveBundle.message(key = "fileType.vdf.name")
-
-    @Suppress("UnusedPrivateMember")
-    private fun readResolve(): Any = VdfLanguage
-}
+class VdfCodeStyleSettings(container: CodeStyleSettings) : CustomCodeStyleSettings(VdfLanguage.id, container)
