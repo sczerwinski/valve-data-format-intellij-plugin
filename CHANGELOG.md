@@ -5,3 +5,4 @@
 ## [Unreleased]
 
 ### Added
+- Basic VDF file syntax
