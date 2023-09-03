@@ -22,4 +22,20 @@ import com.intellij.psi.PsiElement
 /**
  * Base interface for all Valve Data Format PSI elements.
  */
-interface VdfElement : PsiElement, NavigatablePsiElement
+interface VdfElement : PsiElement, NavigatablePsiElement {
+
+    /**
+     * Returns text value of this Valve Data Format PSI element.
+     */
+    fun getTextValue(): String?
+
+    /**
+     * Returns `true` if this Valve Data Format PSI element is an object property.
+     */
+    fun isObject(): Boolean
+
+    /**
+     * Returns Valve Data Format properties inside this element.
+     */
+    fun getProperties(): List<VdfProperty>
+}

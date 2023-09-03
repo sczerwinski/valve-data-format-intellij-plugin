@@ -17,8 +17,11 @@
 package it.czerwinski.ide.plugins.valve.lang.psi.impl
 
 import com.intellij.lang.ASTNode
+import com.intellij.openapi.util.text.StringUtil
 import com.intellij.psi.PsiElement
 import com.intellij.util.IncorrectOperationException
+import it.czerwinski.ide.plugins.valve.lang.psi.VdfLiteral
+import it.czerwinski.ide.plugins.valve.lang.psi.VdfObject
 import it.czerwinski.ide.plugins.valve.lang.psi.VdfProperty
 import org.jetbrains.annotations.NonNls
 
@@ -26,6 +29,12 @@ import org.jetbrains.annotations.NonNls
  * Base implementation for Valve Data Format properties.
  */
 abstract class VdfPropertyMixin(node: ASTNode) : VdfElementImpl(node), VdfProperty {
+
+    /**
+     * Returns name of this property.
+     */
+    override fun getName(): String =
+        StringUtil.unquoteString(key.text)
 
     /**
      * Renames this Valve Data Format property.
@@ -36,4 +45,22 @@ abstract class VdfPropertyMixin(node: ASTNode) : VdfElementImpl(node), VdfProper
     override fun setName(@NonNls name: String): PsiElement {
         throw IncorrectOperationException("Not implemented")
     }
+
+    /**
+     * Returns text value of this Valve Data Format PSI element.
+     */
+    override fun getTextValue(): String? =
+        (value as? VdfLiteral)?.text?.let(StringUtil::unquoteString)?.let(StringUtil::unescapeStringCharacters)
+
+    /**
+     * Returns `true` if this Valve Data Format PSI element is an object property.
+     */
+    override fun isObject(): Boolean =
+        value is VdfObject
+
+    /**
+     * Returns Valve Data Format properties inside this element.
+     */
+    override fun getProperties(): List<VdfProperty> =
+        (value as? VdfObject)?.propertyList.orEmpty()
 }

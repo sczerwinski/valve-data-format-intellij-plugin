@@ -32,6 +32,11 @@
         <lang.foldingBuilder
                 language="VDF"
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.folding.VdfFoldingBuilder"/>
+        <lang.psiStructureViewFactory
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.structure.VdfStructureViewFactory"/>
+        <navbar
+                implementation="it.czerwinski.ide.plugins.valve.lang.structure.VdfStructureAwareNavBar"/>
 
         <colorSettingsPage
                 implementation="it.czerwinski.ide.plugins.valve.settings.VdfColorSettingsPage"/>
