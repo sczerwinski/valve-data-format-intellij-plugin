@@ -40,6 +40,9 @@
         <lang.formatter
                 language="VDF"
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.formatting.VdfFormattingModelBuilder"/>
+        <lang.commenter
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.VdfCommenter"/>
 
         <colorSettingsPage
                 implementation="it.czerwinski.ide.plugins.valve.settings.VdfColorSettingsPage"/>
