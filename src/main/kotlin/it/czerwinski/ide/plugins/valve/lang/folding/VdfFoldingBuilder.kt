@@ -45,8 +45,9 @@ class VdfFoldingBuilder : FoldingBuilderEx(), DumbAware {
      * Returns placeholder text for collapsed braces block.
      */
     override fun getPlaceholderText(node: ASTNode): String =
-        if (isVdfObjectEmpty(node)) EMPTY_BRACES_PLACEHOLDER_TEXT
-        else BRACES_PLACEHOLDER_TEXT
+        if (isVdfObjectEmpty(node)) EMPTY_BRACES_PLACEHOLDER_TEXT else BRACES_PLACEHOLDER_TEXT
+
+    private fun isVdfObjectEmpty(node: ASTNode) = node.getChildren(TokenSet.create(VdfTypes.PROPERTY)).isEmpty()
 
     /**
      * Returns `true` if the given [node] contains no properties.
@@ -54,10 +55,10 @@ class VdfFoldingBuilder : FoldingBuilderEx(), DumbAware {
     override fun isCollapsedByDefault(node: ASTNode): Boolean =
         isVdfObjectEmpty(node)
 
-    private fun isVdfObjectEmpty(node: ASTNode) = node.getChildren(TokenSet.create(VdfTypes.PROPERTY)).isEmpty()
-
     companion object {
+
         @NonNls private const val BRACES_PLACEHOLDER_TEXT = "{...}"
+
         @NonNls private const val EMPTY_BRACES_PLACEHOLDER_TEXT = "{}"
     }
 }
