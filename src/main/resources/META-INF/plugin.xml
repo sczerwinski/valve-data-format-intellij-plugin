@@ -37,9 +37,16 @@
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.structure.VdfStructureViewFactory"/>
         <navbar
                 implementation="it.czerwinski.ide.plugins.valve.lang.structure.VdfStructureAwareNavBar"/>
+        <lang.formatter
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.formatting.VdfFormattingModelBuilder"/>
 
         <colorSettingsPage
                 implementation="it.czerwinski.ide.plugins.valve.settings.VdfColorSettingsPage"/>
+        <codeStyleSettingsProvider
+                implementation="it.czerwinski.ide.plugins.valve.settings.VdfCodeStyleSettingsProvider"/>
+        <langCodeStyleSettingsProvider
+                implementation="it.czerwinski.ide.plugins.valve.settings.VdfLanguageCodeStyleSettingsProvider"/>
 
     </extensions>
 
