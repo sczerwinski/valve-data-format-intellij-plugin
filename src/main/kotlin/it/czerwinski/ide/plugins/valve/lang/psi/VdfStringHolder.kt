@@ -21,7 +21,7 @@ import com.intellij.psi.PsiElement
 /**
  * String literal holding Valve Data Format PSI element.
  */
-interface VdfStringHolder : VdfElement {
+interface VdfStringHolder : PsiElement {
 
     /**
      * Returns PSI element for string literal.

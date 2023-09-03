@@ -40,6 +40,11 @@ object ValveIcons {
      */
     @JvmField val Property: Icon = AllIcons.Nodes.Property
 
+    /**
+     * Error icon.
+     */
+    @JvmField val Error = AllIcons.General.BalloonError
+
     private fun getIcon(path: String): Icon =
         checkNotNull(
             IconLoader.getIcon(path, ValveIcons::class.java)
