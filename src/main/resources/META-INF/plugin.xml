@@ -29,6 +29,9 @@
         <annotator
                 language="VDF"
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.annotation.VdfAnnotator"/>
+        <lang.foldingBuilder
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.folding.VdfFoldingBuilder"/>
 
         <colorSettingsPage
                 implementation="it.czerwinski.ide.plugins.valve.settings.VdfColorSettingsPage"/>
