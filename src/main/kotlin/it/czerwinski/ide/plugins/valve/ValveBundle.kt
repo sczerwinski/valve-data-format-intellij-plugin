@@ -17,6 +17,7 @@
 package it.czerwinski.ide.plugins.valve
 
 import com.intellij.DynamicBundle
+import java.util.function.Supplier
 import org.jetbrains.annotations.NonNls
 import org.jetbrains.annotations.PropertyKey
 
@@ -33,7 +34,7 @@ object ValveBundle : DynamicBundle(BUNDLE) {
      */
     @Suppress("SpreadOperator")
     @JvmStatic
-    fun message(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any) =
+    fun message(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any): String =
         getMessage(key, *params)
 
     /**
@@ -41,6 +42,6 @@ object ValveBundle : DynamicBundle(BUNDLE) {
      */
     @Suppress("SpreadOperator")
     @JvmStatic
-    fun messagePointer(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any) =
+    fun messagePointer(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any): Supplier<String?> =
         getLazyMessage(key, *params)
 }
