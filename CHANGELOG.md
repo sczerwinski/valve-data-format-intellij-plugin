@@ -6,3 +6,4 @@
 
 ### Added
 - Basic VDF file syntax
+- VDF objects folding
