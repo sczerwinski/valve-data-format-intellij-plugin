@@ -30,9 +30,11 @@ class VdfStringLiteralLexer : LexerBase() {
     private var myBufferEnd: Int = 0
 
     private val myStringEnd: Int
-        get() =
-            if (myBufferEnd > 0 && myBuffer[myBufferEnd - 1] == QUOTATION_CHARACTER) myBufferEnd - 1
-            else myBufferEnd
+        get() = if (myBufferEnd > 0 && myBuffer[myBufferEnd - 1] == QUOTATION_CHARACTER) {
+            myBufferEnd - 1
+        } else {
+            myBufferEnd
+        }
 
     private var myStart: Int = 0
     private var myEnd: Int = 0
@@ -79,7 +81,6 @@ class VdfStringLiteralLexer : LexerBase() {
         }
 
         return when (myState) {
-
             AT_REFERENCE_CHARACTER ->
                 VdfStringLiteralTypes.REFERENCE_CHARACTER
 

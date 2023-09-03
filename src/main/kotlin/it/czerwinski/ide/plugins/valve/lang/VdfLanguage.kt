@@ -23,5 +23,6 @@ import com.intellij.lang.Language
  */
 object VdfLanguage : Language("VDF") {
 
+    @Suppress("UnusedPrivateMember")
     private fun readResolve(): Any = VdfLanguage
 }

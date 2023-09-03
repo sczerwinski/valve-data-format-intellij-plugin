@@ -28,7 +28,7 @@ object ValveIcons {
     /**
      * VDF file icon.
      */
-    @JvmField val VdfFile: Icon =getIcon(path = "/icons/vdfFile.svg")
+    @JvmField val VdfFile: Icon = getIcon(path = "/icons/vdfFile.svg")
 
     /**
      * VDF object icon.
