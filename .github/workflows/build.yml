@@ -276,14 +276,14 @@ jobs:
       # Create new release draft - which is not publicly visible and requires manual acceptance
       - name: Create Release Draft
         id: createDraft
-        uses: actions/create-release@v1.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ needs.build.outputs.version }}
-          release_name: v${{ needs.build.outputs.version }}
+          name: v${{ needs.build.outputs.version }}
           body: ${{ needs.build.outputs.changelog }}
           draft: true
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Download plugin artifact provided by the previous job
       - name: Download Artifact
