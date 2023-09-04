@@ -13,3 +13,6 @@
 - VDF line marker provider
 - VDF find usages provider 
 - VDF reference contributor 
+
+[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.0.0...main
+[1.0.0]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/releases/tag/v1.0.0
