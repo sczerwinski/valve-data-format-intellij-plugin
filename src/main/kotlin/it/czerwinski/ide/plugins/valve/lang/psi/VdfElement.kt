@@ -25,6 +25,11 @@ import com.intellij.psi.PsiElement
 interface VdfElement : PsiElement, NavigatablePsiElement {
 
     /**
+     * Returns all child properties with given name recursively.
+     */
+    fun findProperties(name: String): Sequence<VdfProperty>
+
+    /**
      * Returns text value of this Valve Data Format PSI element.
      */
     fun getTextValue(): String?

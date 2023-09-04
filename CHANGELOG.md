@@ -10,3 +10,6 @@
 - VDF structure view and structure-aware navigation bar
 - VDF formatter and basic code style settings
 - VDF commenter
+- VDF line marker provider
+- VDF find usages provider 
+- VDF reference contributor 

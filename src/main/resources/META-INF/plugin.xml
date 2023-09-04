@@ -29,6 +29,15 @@
         <annotator
                 language="VDF"
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.annotation.VdfAnnotator"/>
+        <codeInsight.lineMarkerProvider
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.psi.reference.VdfLineMarkerProvider"/>
+        <psi.referenceContributor
+                language="VDF"
+                implementation="it.czerwinski.ide.plugins.valve.lang.psi.reference.VdfReferenceContributor"/>
+        <lang.findUsagesProvider
+                language="VDF"
+                implementationClass="it.czerwinski.ide.plugins.valve.lang.psi.reference.VdfFindUsagesProvider"/>
         <lang.foldingBuilder
                 language="VDF"
                 implementationClass="it.czerwinski.ide.plugins.valve.lang.folding.VdfFoldingBuilder"/>
