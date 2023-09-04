@@ -1,0 +1,10 @@
+"object"
+{
+    "aaa" "aaa"
+    "bbb" "#ccc"
+    "ccc"
+    {
+        "linuxpath" "/usr/local/bin"
+        "winpath" "\"C:\\Program Files\\Steam\\\""
+    }
+}

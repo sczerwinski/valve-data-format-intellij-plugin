@@ -1,0 +1,13 @@
+"object"
+<fold text='{...}'>{
+    "aaa" "aaa"
+    "bbb" "#ccc"
+    "ccc"
+    <fold text='{...}'>{
+        "linuxpath" "/usr/local/bin"
+        "winpath" "\"C:\\Program Files\\Steam\\\""
+    }</fold>
+    "empty"
+    <fold text='{}'>{
+    }</fold>
+}</fold>

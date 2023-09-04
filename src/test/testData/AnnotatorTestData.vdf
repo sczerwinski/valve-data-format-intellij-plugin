@@ -1,0 +1,10 @@
+<info descr="null">"object"</info>
+{
+    <info descr="null">"aaa"</info> "aaa"
+    <info descr="null">"bbb"</info> "#ccc"
+    <info descr="null">"ccc"</info>
+    {
+        <info descr="null">"linuxpath"</info> "/usr/local/bin"
+        <info descr="null">"winpath"</info> "\"C:\\Program Files\\Steam\\\""
+    }
+}
