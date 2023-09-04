@@ -38,7 +38,7 @@
   extends("object|literal")=value
   implements("property")=[
     "it.czerwinski.ide.plugins.valve.lang.psi.VdfElement"
-    "com.intellij.psi.PsiNamedElement"
+    "com.intellij.psi.PsiNameIdentifierOwner"
   ]
 }
 
@@ -58,4 +58,5 @@ object ::= LBRACE property* RBRACE
 
 literal ::= STRING {
   implements="it.czerwinski.ide.plugins.valve.lang.psi.VdfStringHolder"
+  mixin="it.czerwinski.ide.plugins.valve.lang.psi.impl.VdfLiteralMixin"
 }

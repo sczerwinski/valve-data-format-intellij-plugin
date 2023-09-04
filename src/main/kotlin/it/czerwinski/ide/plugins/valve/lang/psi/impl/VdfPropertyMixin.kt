@@ -31,6 +31,12 @@ import org.jetbrains.annotations.NonNls
 abstract class VdfPropertyMixin(node: ASTNode) : VdfElementImpl(node), VdfProperty {
 
     /**
+     * Returns name identifier of this property.
+     */
+    override fun getNameIdentifier(): PsiElement? =
+        key
+
+    /**
      * Returns name of this property.
      */
     override fun getName(): String =
@@ -44,6 +50,16 @@ abstract class VdfPropertyMixin(node: ASTNode) : VdfElementImpl(node), VdfProper
     @Throws(IncorrectOperationException::class)
     override fun setName(@NonNls name: String): PsiElement {
         throw IncorrectOperationException("Not implemented")
+    }
+
+    /**
+     * Returns all child properties with given [name] recursively.
+     */
+    override fun findProperties(name: String): Sequence<VdfProperty> {
+        val matchingChildren = getProperties()
+            .asSequence()
+            .flatMap { property -> property.findProperties(name) }
+        return if (this.name == name) sequenceOf(this) + matchingChildren else matchingChildren
     }
 
     /**

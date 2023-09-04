@@ -19,6 +19,7 @@ package it.czerwinski.ide.plugins.valve.lang.psi
 import com.intellij.extapi.psi.PsiFileBase
 import com.intellij.openapi.fileTypes.FileType
 import com.intellij.psi.FileViewProvider
+import com.intellij.psi.util.childrenOfType
 import it.czerwinski.ide.plugins.valve.lang.VdfFileType
 import it.czerwinski.ide.plugins.valve.lang.VdfLanguage
 
@@ -32,6 +33,22 @@ class VdfFile(viewProvider: FileViewProvider) : PsiFileBase(viewProvider, VdfLan
      */
     override fun getFileType(): FileType =
         VdfFileType
+
+    /**
+     * Returns all properties in this file.
+     */
+    fun findAllProperties(): Sequence<VdfProperty> =
+        childrenOfType<VdfProperty>()
+            .asSequence()
+            .flatMap { property -> sequenceOf(property) + property.getProperties() }
+
+    /**
+     * Returns all properties with given [name] in this file.
+     */
+    fun findProperties(name: String): Sequence<VdfProperty> =
+        childrenOfType<VdfProperty>()
+            .asSequence()
+            .flatMap { property -> property.findProperties(name) }
 
     /**
      * Returns string representation of this file.
