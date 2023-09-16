@@ -7,7 +7,14 @@
 ![GitHub][licence_badge]
 
 <!-- Plugin description -->
-Adds support for Valve Data Format (VDF) files, used in Steam development.
+Adds support for Valve Data Format (VDF) files, used in development for Steam.
+
+Key features:
+
+- syntax highlighting;
+- formatting, folding, commenting;
+- structure view;
+- navigation between a key and a value starting with `#`.
 <!-- Plugin description end -->
 
 A good example of a VDF file is [In-Game Actions File]. 
