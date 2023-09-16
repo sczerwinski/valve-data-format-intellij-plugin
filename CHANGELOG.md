@@ -6,6 +6,8 @@
 
 ### Added
 
+- Support for escape sequences: `\t` and `\n`
+
 ### Changed
 
 - Refine red valve icons

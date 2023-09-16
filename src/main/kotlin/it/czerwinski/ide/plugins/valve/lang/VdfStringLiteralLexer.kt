@@ -146,7 +146,7 @@ class VdfStringLiteralLexer : LexerBase() {
         private const val QUOTATION_CHARACTER = '"'
         private const val REFERENCE_CHARACTER = '#'
         private const val ESCAPE_CHARACTER = '\\'
-        private const val ESCAPABLE_CHARACTERS = "\\\""
+        private const val ESCAPABLE_CHARACTERS = "nt\\\""
 
         private const val INITIAL_STATE = 0
         private const val AFTER_START_QUOTE = 1
