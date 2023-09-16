@@ -9,6 +9,7 @@
 ### Changed
 
 - Refine red valve icons
+- `pluginVerifierIdeVersions` – upgrade to `2022.2.5, 2022.3.3, 2023.1.5, 2023.2.2`
 
 ### Deprecated
 
