@@ -8,6 +8,8 @@
 
 ### Changed
 
+- Refine red valve icons
+
 ### Deprecated
 
 ### Removed
