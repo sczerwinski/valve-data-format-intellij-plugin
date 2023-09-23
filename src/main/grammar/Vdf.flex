@@ -30,7 +30,6 @@ import static it.czerwinski.ide.plugins.valve.lang.psi.VdfTypes.*;
 %unicode
 %function advance
 %type IElementType
-%unicode
 %eof{  return;
 %eof}
 
