@@ -6,6 +6,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.1.0] - 2023-10-05
+
+### Added
+
 - Add support for platform version `233.*`
 - Support for escape sequences: `\t` and `\n`
 
@@ -31,5 +45,6 @@
 - VDF find usages provider 
 - VDF reference contributor
 
-[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.0.0...main
+[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.0...main
+[1.1.0]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/releases/tag/v1.0.0
