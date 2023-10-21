@@ -69,6 +69,7 @@ class VdfPropertyReference(
             .map { property ->
                 LookupElementBuilder.create(property)
                     .withIcon(if (property.isObject()) ValveIcons.Object else ValveIcons.Property)
+                    .withTypeText(if (property.isObject()) OBJECT_VALUE else property.value.text, property.isObject())
             }
             .toList()
             .toTypedArray()
@@ -90,12 +91,16 @@ class VdfPropertyReference(
             } else {
                 null
             }
-            return if (propertyName != null) {
+            return if (!propertyName.isNullOrBlank()) {
                 val textRange = TextRange.from(element.text.indexOf(propertyName), propertyName.length)
                 arrayOf(VdfPropertyReference(element, textRange))
             } else {
                 return PsiReference.EMPTY_ARRAY
             }
         }
+    }
+
+    companion object {
+        private const val OBJECT_VALUE = "{...}"
     }
 }

@@ -79,4 +79,14 @@ abstract class VdfPropertyMixin(node: ASTNode) : VdfElementImpl(node), VdfProper
      */
     override fun getProperties(): List<VdfProperty> =
         (value as? VdfObject)?.propertyList.orEmpty()
+
+    /**
+     * Returns Valve Data Format properties inside this element recursively.
+     */
+    override fun getPropertiesRecursively(): Sequence<VdfProperty> {
+        val children = getProperties()
+            .asSequence()
+            .flatMap { property -> property.getPropertiesRecursively() }
+        return sequenceOf(this) + children
+    }
 }

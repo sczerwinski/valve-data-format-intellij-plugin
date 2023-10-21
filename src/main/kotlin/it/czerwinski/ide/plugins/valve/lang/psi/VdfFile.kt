@@ -40,7 +40,7 @@ class VdfFile(viewProvider: FileViewProvider) : PsiFileBase(viewProvider, VdfLan
     fun findAllProperties(): Sequence<VdfProperty> =
         childrenOfType<VdfProperty>()
             .asSequence()
-            .flatMap { property -> sequenceOf(property) + property.getProperties() }
+            .flatMap { property -> sequenceOf(property) + property.getPropertiesRecursively() }
 
     /**
      * Returns all properties with given [name] in this file.

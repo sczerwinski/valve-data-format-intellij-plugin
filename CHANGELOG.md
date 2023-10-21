@@ -16,6 +16,8 @@
 
 ### Fixed
 
+- Find properties recursively for property reference completion
+
 ### Security
 
 ## [1.1.0] - 2023-10-05
