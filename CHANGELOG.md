@@ -12,15 +12,9 @@
 
 - `pluginVerifierIdeVersions` – upgrade to `2022.2.5, 2022.3.3, 2023.1.5, 2023.2.5, 2023.3.2, 2024.1`
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - Find properties recursively for property reference completion
-
-### Security
 
 ## [1.1.0] - 2023-10-05
 
