@@ -6,6 +6,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 1.1.1 - 2024-01-20
+
+### Added
+
 - Add support for platform version `241.*`
 
 ### Changed
