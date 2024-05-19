@@ -12,14 +12,6 @@
 
 - `pluginVerifierIdeVersions` – upgrade to `2022.2.5, 2022.3.3, 2023.1.6, 2023.2.6, 2023.3.6, 2024.1.1, 2024.2`
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
 ## [1.1.1] - 2024-01-20
 
 ### Added
