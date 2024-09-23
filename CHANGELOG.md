@@ -6,11 +6,18 @@
 
 ### Added
 
+- Add support for platform version `243.*`
+
 ### Changed
+
+- Replace `org.jetbrains.intellij` with `org.jetbrains.intellij.platform` version `2.0.0`
+- `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2023.1.7, 2023.2.8, 2023.3.8, 2024.1.6, 2024.2.2, 2024.3`
 
 ### Deprecated
 
 ### Removed
+
+- Remove support for platform version `222.*`
 
 ### Fixed
 
