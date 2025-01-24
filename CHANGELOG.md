@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.1.4] - 2025-01-24
+
 ### Added
 
 - Add support for platform version `251.*`
