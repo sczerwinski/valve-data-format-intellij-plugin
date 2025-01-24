@@ -13,15 +13,9 @@
 - Replace `org.jetbrains.intellij` with `org.jetbrains.intellij.platform` version `2.0.0`
 - `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2023.1.7, 2023.2.8, 2023.3.8, 2024.1.7, 2024.2.5, 2024.3.2, 251.17181.16`
 
-### Deprecated
-
 ### Removed
 
 - Remove support for platform version `222.*`
-
-### Fixed
-
-### Security
 
 ## [1.1.3] - 2024-11-08
 
@@ -86,8 +80,9 @@
 - VDF find usages provider 
 - VDF reference contributor
 
-[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.3...main
-[1.1.3]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.3...v1.1.3
+[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.4...main
+[1.1.4]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.3...v1.1.4
+[1.1.3]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.0.0...v1.1.0
