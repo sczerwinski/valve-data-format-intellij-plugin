@@ -31,10 +31,6 @@ repositories {
     intellijPlatform {
         defaultRepositories()
     }
-    maven {
-        name = "JogAmp"
-        url = uri(path = "https://www.jogamp.org/deployment/maven/")
-    }
 }
 
 // Set the JVM language level used to compile sources and generate files - Java 17 is required since 2022.2
