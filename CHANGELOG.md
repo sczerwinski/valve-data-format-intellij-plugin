@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix auto-generated release notes in plugin’s metadata (What’s New section)
+
 ## [1.1.4] - 2025-01-24
 
 ### Added

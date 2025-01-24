@@ -1,4 +1,5 @@
 import io.gitlab.arturbosch.detekt.Detekt
+import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.grammarkit.tasks.GenerateLexerTask
 import org.jetbrains.grammarkit.tasks.GenerateParserTask
@@ -112,8 +113,10 @@ intellijPlatform {
         // Get the latest available change notes from the changelog file
         changeNotes = providers.gradleProperty("pluginVersion").map { pluginVersion ->
             with(changelog) {
+                val changelogItem = getOrNull(pluginVersion) ?: getUnreleased()
                 renderItem(
-                    (getOrNull(pluginVersion) ?: getUnreleased())
+                    changelogItem.withHeader(false),
+                    Changelog.OutputType.HTML
                 )
             }
         }
