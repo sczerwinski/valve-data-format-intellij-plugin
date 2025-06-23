@@ -11,7 +11,7 @@ plugins {
     // Java support
     id("java")
     // Kotlin support
-    id("org.jetbrains.kotlin.jvm") version "2.1.21"
+    id("org.jetbrains.kotlin.jvm") version "2.2.0"
     // Gradle IntelliJ Plugin
     id("org.jetbrains.intellij.platform") version "2.6.0"
     // Gradle Grammar-Kit Plugin
