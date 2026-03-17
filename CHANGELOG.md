@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add support for platform version `261.*`
+
+### Changed
+
+- `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2025.2.6.1`
+
+
 ## [1.1.6] - 2025-11-05
 
 ### Added
