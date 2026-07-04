@@ -42,7 +42,7 @@
   ]
 }
 
-vdf ::= property
+vdf ::= property+
 
 property ::= key value {
   mixin="it.czerwinski.ide.plugins.valve.lang.psi.impl.VdfPropertyMixin"
