@@ -8,6 +8,10 @@
 
 - Add support for platform version `262.*`
 
+### Fixed
+
+- Allow for multiple root elements in VDF files
+
 ## [1.1.7] - 2026-03-20
 
 ### Added
