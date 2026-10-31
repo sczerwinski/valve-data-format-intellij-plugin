@@ -43,5 +43,5 @@ object ValveBundle : DynamicBundle(BUNDLE) {
     @Suppress("SpreadOperator")
     @JvmStatic
     fun messagePointer(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any): Supplier<String?> =
-        getLazyMessage(key, *params)
+        Supplier { getLazyMessage(key, *params).get() }
 }

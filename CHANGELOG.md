@@ -6,7 +6,21 @@
 
 ### Changed
 
-- Remove upper version limit to allow all future IDE versions by default.
+- Remove upper version limit to allow all future IDE versions by default
+- Use IntelliJ IDEA platform type with plugin verifier
+- Use platform versions returned by `printProductsReleases`
+
+### Removed
+
+- Remove support for platform version `223.*`
+- Remove support for platform version `231.*`
+- Remove support for platform version `232.*`
+- Remove support for platform version `233.*`
+- Remove support for platform version `241.*`
+- Remove support for platform version `242.*`
+- Remove support for platform version `243.*`
+- Remove support for platform version `251.*`
+- Remove support for platform version `252.*`
 
 ## [1.2.0] - 2026-07-04
 
