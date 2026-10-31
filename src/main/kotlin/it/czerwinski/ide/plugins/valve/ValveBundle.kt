@@ -27,7 +27,8 @@ private const val BUNDLE = "messages.ValveBundle"
 /**
  * Localized messages bundle.
  */
-object ValveBundle : DynamicBundle(BUNDLE) {
+object ValveBundle {
+    private val instance = DynamicBundle(ValveBundle::class.java, BUNDLE)
 
     /**
      * Returns a localized message for the given [key].
@@ -35,7 +36,7 @@ object ValveBundle : DynamicBundle(BUNDLE) {
     @Suppress("SpreadOperator")
     @JvmStatic
     fun message(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any): String =
-        getMessage(key, *params)
+        instance.getMessage(key, *params)
 
     /**
      * Returns a localized message for the given [key], formatted with the given [params].
@@ -43,5 +44,5 @@ object ValveBundle : DynamicBundle(BUNDLE) {
     @Suppress("SpreadOperator")
     @JvmStatic
     fun messagePointer(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any): Supplier<String?> =
-        Supplier { getLazyMessage(key, *params).get() }
+        Supplier { instance.getLazyMessage(key, *params).get() }
 }
