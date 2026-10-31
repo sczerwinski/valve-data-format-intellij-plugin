@@ -7,7 +7,8 @@
 ### Changed
 
 - Remove upper version limit to allow all future IDE versions by default.
-- `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2025.3`
+- Use IntelliJ IDEA platform type with plugin verifier.
+- `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2026.3`
 
 ## [1.2.0] - 2026-07-04
 

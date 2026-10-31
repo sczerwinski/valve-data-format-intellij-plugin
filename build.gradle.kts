@@ -144,7 +144,7 @@ intellijPlatform {
                 .map(String::trim)
                 .filter(String::isNotEmpty)
                 .forEach { version ->
-                    ide(IntelliJPlatformType.IntellijIdeaCommunity, version)
+                    ide(IntelliJPlatformType.IntellijIdea, version)
                 }
         }
     }
