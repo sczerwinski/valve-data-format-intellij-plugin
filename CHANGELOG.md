@@ -144,7 +144,8 @@
 - VDF find usages provider 
 - VDF reference contributor
 
-[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.2.0...main
+[Unreleased]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.2.1...main
+[1.2.1]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.7...v1.2.0
 [1.1.7]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/sczerwinski/valve-data-format-intellij-plugin/compare/v1.1.5...v1.1.6
