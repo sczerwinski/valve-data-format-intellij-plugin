@@ -1,21 +1,21 @@
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
-import org.jetbrains.grammarkit.tasks.GenerateLexerTask
-import org.jetbrains.grammarkit.tasks.GenerateParserTask
 import org.jetbrains.intellij.platform.gradle.Constants.Constraints
 import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+import org.jetbrains.intellij.platform.gradle.tasks.GenerateLexerTask
+import org.jetbrains.intellij.platform.gradle.tasks.GenerateParserTask
 
 plugins {
     // Java support
     id("java")
     // Kotlin support
-    id("org.jetbrains.kotlin.jvm") version "2.3.20"
+    id("org.jetbrains.kotlin.jvm") version "2.4.20"
     // Gradle IntelliJ Plugin
-    id("org.jetbrains.intellij.platform") version "2.9.0"
+    id("org.jetbrains.intellij.platform") version "2.19.0"
     // Gradle Grammar-Kit Plugin
-    id("org.jetbrains.grammarkit") version "2023.3.0.1"
+    id("org.jetbrains.intellij.platform.grammarkit") version "2.19.0"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "2.5.0"
     // detekt linter - read more: https://detekt.github.io/detekt/kotlindsl.html
@@ -76,7 +76,7 @@ fun generateLexerTask(suffix: String, config: GenerateLexerTask.() -> Unit = {})
     tasks.register<GenerateLexerTask>("generateLexer${suffix.replaceFirstChar { it.uppercaseChar() }}") {
         description = "Generate lexer for ${suffix.uppercase()} file format"
         sourceFile.set(file("src/main/grammar/${suffix.replaceFirstChar { it.uppercaseChar() }}.flex"))
-        targetOutputDir.set(file("${project.layout.buildDirectory.get()}/generated/source/lexer/$suffix/it/czerwinski/intellij/wavefront/lang"))
+        targetRootOutputDir.set(file("${project.layout.buildDirectory.get()}/generated/source/lexer/$suffix"))
         purgeOldFiles.set(true)
         config()
     }
