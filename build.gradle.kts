@@ -33,11 +33,6 @@ repositories {
     }
 }
 
-// Set the JVM language level used to compile sources and generate files - Java 17 is required since 2022.2
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.8")
 
