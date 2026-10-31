@@ -11,11 +11,11 @@ plugins {
     // Java support
     id("java")
     // Kotlin support
-    id("org.jetbrains.kotlin.jvm") version "2.3.20"
+    id("org.jetbrains.kotlin.jvm") version "2.4.20"
     // Gradle IntelliJ Plugin
-    id("org.jetbrains.intellij.platform") version "2.9.0"
+    id("org.jetbrains.intellij.platform") version "2.19.0"
     // Gradle Grammar-Kit Plugin
-    id("org.jetbrains.grammarkit") version "2023.3.0.1"
+    id("org.jetbrains.grammarkit") version "2023.3.0.4"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "2.5.0"
     // detekt linter - read more: https://detekt.github.io/detekt/kotlindsl.html
