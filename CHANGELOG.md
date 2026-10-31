@@ -7,7 +7,6 @@
 ### Changed
 
 - Remove upper version limit to allow all future IDE versions by default.
-- `pluginVerifierIdeVersions` – upgrade to `2022.3.3, 2026.2.4`
 
 ## [1.2.0] - 2026-07-04
 
