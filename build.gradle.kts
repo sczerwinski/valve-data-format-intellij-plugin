@@ -13,7 +13,7 @@ plugins {
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "2.4.21"
     // Gradle IntelliJ Plugin
-    id("org.jetbrains.intellij.platform") version "2.19.0"
+    id("org.jetbrains.intellij.platform") version "2.20.0"
     // Gradle Grammar-Kit Plugin
     id("org.jetbrains.intellij.platform.grammarkit") version "2.19.0"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
